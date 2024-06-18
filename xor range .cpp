@@ -3,50 +3,7 @@ using namespace std;
 #define FAST_DOT_COM  ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 #define int long long
 const int N = 2e5+5 ,MOD=1e9+7, INF=0X3F3F3F3F , MAX= 1e12+5;
-int dx[4] = {1, 0, -1, 0};
-int dy[4] = {0, 1, 0, -1};
-//bool comp(pair<int, int> &a,pair<int,int> &b) {
-//    if (a.first != b.first) return a.first > b.first;
-//    return a.second < b.second;
-//}
 const int SQ= ceil(sqrt(N)) , num_of_queries=1e5+5;
-//struct query{
-//    int l , r , blk_idx , q_idx ;
-//    query(){}
-//    query(int _l , int _r ,int _q_idx){
-//        l=_l , r=_r , q_idx=_q_idx , blk_idx=_l/SQ;
-//    }
-//    // sort queries
-//    bool operator<(const query &q)const{
-//        if(blk_idx!=q.blk_idx){
-//            return blk_idx<q.blk_idx;
-//        }
-//        return r<q.r;
-//    }
-//};
-//int mp[100009], q ,k,res=0 , a[N],ans[num_of_queries];
-//query qu[num_of_queries];
-//void add(int idx){
-//    mp[a[idx]]++;
-//    res+=mp[a[idx]^k];
-//    res-=(k==0);
-//}
-//void remove(int idx){
-//    res-=(mp[a[idx]^k]);
-//    mp[a[idx]]--;
-//    res+=(k==0);
-//}
-//void MO_Process(){
-//    sort(qu,qu+q);
-//    int l=1 , r=0 ;
-//    for (int i = 0; i < q; ++i) {
-//        while (l<qu[i].l)remove(l++);
-//        while (l>qu[i].l)add(--l);
-//        while (r<qu[i].r)add(++r);
-//        while (r>qu[i].r)remove(r--);
-//        ans[qu[i].q_idx]=res;
-//    }
-//}
 vector<int>block,v;
 int ign = 1e9+5 ;
 int mrg(int a , int b){
