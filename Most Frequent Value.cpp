@@ -53,7 +53,7 @@ void solve() {
     a.assign(n, {});
 
     map<int, int> mp;
-    for (int &i: a)cin >> i , mp[i];
+    for (int &i: a)cin >> i , mp[i]++;
     int id = 0;
     for (auto &[u, v]: mp)v = id++;
     for (int &i: a)i = mp[i];
